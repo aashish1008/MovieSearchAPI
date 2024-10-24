@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🎬 Movie Search</h1>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search for movies..." 
+                        aria-label="Search movies"
+                    >
+                    <button id="searchButton">Search</button>
+                </div>
+                <div class="filter-options">
+                    <div class="rating-container">
+                        <label for="ratingFilter">Min Rating:</label>
+                        <input 
+                            type="range" 
+                            id="ratingFilter" 
+                            min="0" 
+                            max="10" 
+                            step="0.5" 
+                            value="0"
+                        >
+                        <span id="ratingValue" class="rating-value">0</span>
+                    </div>
+                    <select id="filterOption" aria-label="Filter options">
+                        <option value="imdbRating">IMDb Rating</option>
+                        <option value="year">Year</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main id="movieGrid" class="movie-grid">
+        <!-- Movies will be displayed here -->
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
